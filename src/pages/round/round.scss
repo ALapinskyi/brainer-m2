@@ -1,0 +1,46 @@
+page-round {
+
+}
+
+.title-round {
+    font-size: 12px;
+}
+
+.title-question {
+    font-size: 16px;
+}
+
+#next-question-button {
+    position: fixed;
+    bottom: 10px;
+}
+
+#round-question-desc {
+    height: 40%;
+    font-size: 18px;
+    padding: 10px;
+    background-color: darkkhaki;
+    border-radius: 1%;
+    margin-bottom: 30px;
+}
+
+#round-answers {
+    button {
+        text-transform: none;
+        margin: 10px 0;
+        height: 40px;
+
+        span {
+            justify-content: right;
+        }
+    }
+}
+
+#overflow {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(178, 169, 218, 0.7);
+}

@@ -1,0 +1,37 @@
+page-single-play {
+
+}
+
+#start-new-game {
+    margin-left: -150px;
+
+    .fab{
+        width: 300px;
+        border-radius: 0;
+        height: 50px;
+        font-size: 16px;
+    }
+
+}
+
+.game-card {
+    background-color: rgba(0, 0, 0, 0.384);
+    color: white;
+    padding: 25px 0px;
+    text-align: center;
+    border-radius: 1.5em;
+
+    .card-title {
+        font-size: 18px;
+    }
+}
+
+.game-card.your-turn {
+    background-color: #80d0c7;
+
+}
+
+.hiddesSlowly {
+    opacity: 0;
+    height: 0;
+}

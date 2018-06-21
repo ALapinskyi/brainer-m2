@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+      <ion-title *ngIf="!isSearchMode">
+        My Friends
+      </ion-title>
+      <ion-buttons end *ngIf="!isSearchMode">
+        <button ion-button icon-only (click)="setSearchMode(true)">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+
+    <ion-title *ngIf="isSearchMode">
+        <ion-searchbar placeholder="Search users"
+        (ionInput)="findUsers($event)" (ionClear)="onClear($event)"></ion-searchbar>
+    </ion-title>
+    <ion-buttons end *ngIf="isSearchMode">
+      <button ion-button icon-only (click)="setSearchMode(false)">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+  <ion-toolbar no-border-top *ngIf="!isSearchMode">
+    <ion-segment [(ngModel)]="filterType">
+        <ion-segment-button value="all">
+          All
+        </ion-segment-button>
+        <ion-segment-button value="facebook">
+          Facebook
+        </ion-segment-button>
+        <ion-segment-button value="requests">
+          Requests
+        </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding id="friends-page">
+
+  <ion-list id="myFriends-list" *ngIf="!isSearchMode">
+    <ion-item-sliding *ngFor="let item of getFriendsList(filterType)">
+          
+      <ion-item color="none" id="myFriends-{{item.username}}">
+          <ion-avatar item-left>
+            <img />
+          </ion-avatar>
+          <h2>
+              {{ item.username }}
+          </h2>
+        </ion-item>
+        <ion-item-options side="left">
+          <button ion-button color="assertive">
+            Remove
+          </button>
+        </ion-item-options>
+        <ion-item-options side="right">
+          <button ion-button color="balanced">
+            Play
+          </button>
+        </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list id="myFriends-searchResults" *ngIf="isSearchMode">
+      <ion-item-sliding *ngFor="let item of searchResults">
+          
+      <ion-item color="none" id="myFriends-{{item.username}}">
+          <ion-avatar item-left>
+            <img />
+          </ion-avatar>
+          <h2>
+              {{ item.username }}
+          </h2>
+        </ion-item>
+        <ion-item-options side="right">
+            <button ion-button color="assertive">
+              Add
+            </button>
+          <button ion-button color="balanced">
+            Play
+          </button>
+        </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

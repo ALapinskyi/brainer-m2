@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Single Play
+    </ion-title>
+    <!--<ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="chatboxes"></ion-icon>
+      </button>
+    </ion-buttons>-->
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="simple-game-page">
+  <!--<button id="singlePlay-button1" ion-button color="positive" block on-click="goToNewGame()">
+    Start new
+  </button>-->
+  <h4 id="singlePlay-heading1" style="color:#000000;font-weight:400;">
+    Actual games
+  </h4>
+  
+  <ion-card class="game-card" 
+            id="{{item.id}}"
+            (click)="item.waitingFor === currentUser.username? selectGame(item.id) : goToRoundInfo(item.id)" 
+            [ngClass]="{'your-turn':item.waitingFor === currentUser.username}"
+            *ngFor="let item of actualGames">
+
+    <ion-card-content swipeAll (swipedown)="expandCard(item);" (swipeup)="hideExpandedCard(item);">
+        <div class="card-title">Round {{item.roundNumber}} - {{item.score}}</div>
+        <div class="card-subtitle">{{item.secondPlayer.fullName}}</div>
+        <div class="hiddesSlowly" [@expandGameCard]="item.expandedCard">
+            <ion-list id="myFriends-list" *ngIf="!isSearchMode">
+                      
+                  <ion-item color="none" id="myFriends" *ngFor="let round of item.rounds">
+                      <h2>
+                          {{ round.score }}
+                      </h2>
+                    </ion-item>
+              </ion-list>
+            
+        </div>
+    </ion-card-content>
+
+
+  </ion-card>
+
+
+  <button id="singlePlay-button2" ion-button color="secondary" block>
+    Show finished
+  </button>
+
+  <ion-fab center bottom id="start-new-game">
+      <button ion-fab color="primary">Start new</button>
+      <ion-fab-list side="top">
+          <button ion-fab>Quick game</button>
+          <button ion-fab>Play with friend</button>
+          <button ion-fab>Find user</button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

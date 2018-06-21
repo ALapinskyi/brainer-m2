@@ -1,0 +1,93 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+ion-nav ion-content > *{
+    background-color: color($colors, light, base);
+}
+
+.scroll-content {
+    overflow: hidden;
+}
+
+ion-header {
+    .toolbar-background {
+        background-color: color($colors, blue-dark, base);
+    }
+    .toolbar-title, ion-icon {
+        color: color($colors, light, base);
+    }
+}
+
+.menu-inner{
+    width: 70%;
+}
+ion-content#side-menu {
+    background-color: color($colors, secondary, base);
+
+    .scroll-content {
+        overflow: hidden;
+    }
+
+    #menu-list{
+        height: -webkit-fill-available;
+        margin: 0;
+
+
+        ion-item{
+            background-color: transparent;
+
+            .item-inner {
+                border: none;
+            }
+
+            &.activePage{
+                background-image: linear-gradient(30deg, #1b4c69 0%, #80d0c7 100%);
+                color: color($colors, light, base);
+            }
+        }
+        #menu-list-item-user{
+            height: 6em;
+            margin-bottom: 30px;
+            background-image: linear-gradient(30deg, #1b4c69 0%, #80d0c7 100%);
+
+            ion-avatar>img {
+                width: 4em;
+                height: 4em;
+            }
+
+            #profile-values{
+                display: flex;
+                color: color($colors, light, base);
+
+                div{
+                    margin-right: 0.8em
+                }
+            }
+
+            h2{
+                color: color($colors, light, base);
+                font-weight: bold;
+                font-size: 1.4rem;
+            }
+        }
+        #menu-list-item-logout{
+            bottom: 10px;
+            position: absolute;
+            color:color($colors, danger, base);
+        }
+    }
+}
