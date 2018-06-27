@@ -1,12 +1,22 @@
-<ion-list>
-    <ion-row>
-        <button ion-button block small (click)="useHelp('50')">
-          50/50
-        </button>
-    </ion-row>
-    <ion-row>
-        <button ion-button block small (click)="useHelp('most')">
-          Most selected
-        </button>
-    </ion-row>
-  </ion-list>
+<ion-grid id="popover-grid">
+  <ion-row>
+    <span>Do you need help?</span>
+    <span>Buy hints</span>
+  </ion-row>
+  <ion-row>
+    <span>Hide two answers (1<ion-icon name="star"></ion-icon>)</span>
+  </ion-row>
+  <ion-row>
+    <button ion-button small (click)="useHelp('50')">
+      50/50
+    </button>
+  </ion-row>
+  <ion-row>
+    <span>Show rating of answers (2<ion-icon name="star"></ion-icon>)</span>
+  </ion-row>
+  <ion-row>
+    <button ion-button small (click)="useHelp('most')">
+      Most selected
+    </button>
+  </ion-row>
+</ion-grid>

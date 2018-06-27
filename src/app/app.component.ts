@@ -58,5 +58,9 @@ export class MyApp {
     return page == this.activePage;
   }
 
+  goToProfile() {
+    this.navCtrl.setRoot(ProfilePage);
+  }
+
 
 }

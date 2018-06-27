@@ -8,4 +8,63 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page11"></ion-content>
+<ion-content padding id="page-profile">
+    <ion-grid>
+        <ion-row id="profile-row">
+          <ion-col>
+            <ion-avatar>
+              <img src="assets/imgs/user.png"/>
+            </ion-avatar>
+          </ion-col>
+          <ion-col id="main-profile-info">
+            <div>
+              <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
+              Oleksii Lapinskyi
+            </div>
+            <div>
+              <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
+              olapinskyi
+            </div>
+            <div>
+              <ion-icon name="checkmark-circle-outline" item-left></ion-icon>
+              18.06.1995
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row id="buttons-row">
+          <ion-col>
+            <button  class="rounded-button" ion-button color="primary">
+              <ion-icon name="pencil"></ion-icon>
+              Edit profile
+            </button>
+          </ion-col>
+          <!--<ion-col>
+            <button class="rounded-button" ion-button color="primary">
+              <ion-icon name="checkmark-circle-outline"></ion-icon>
+              Send message
+            </button>
+          </ion-col>
+          <ion-col>
+            <button class="rounded-button" ion-button color="primary">
+              <ion-icon name="checkmark-circle-outline"></ion-icon>
+              Add to friends
+            </button>
+          </ion-col>-->
+        </ion-row>
+        <ion-row  id="main-stats-row">
+          <ion-col>
+            <h6>215</h6>
+            <p>Games</p>
+          </ion-col>
+          <ion-col>
+            <h6>48%</h6>
+            <p>Win</p>
+          </ion-col>
+          <ion-col>
+            <h6>15</h6>
+            <p>Friends</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+</ion-content>

@@ -17,7 +17,7 @@
   <!--<button id="singlePlay-button1" ion-button color="positive" block on-click="goToNewGame()">
     Start new
   </button>-->
-  <h4 id="singlePlay-heading1" style="color:#000000;font-weight:400;">
+  <h4 id="singlePlay-heading">
     Actual games
   </h4>
   
@@ -47,7 +47,7 @@
   </ion-card>
 
 
-  <button id="singlePlay-button2" ion-button color="secondary" block>
+  <button id="singlePlay-button2" ion-button color="primary" block outline>
     Show finished
   </button>
 
@@ -59,4 +59,15 @@
           <button ion-fab>Find user</button>
     </ion-fab-list>
   </ion-fab>
+
+  <ion-footer>
+      <ion-navbar>
+        <div id="shape"></div>
+          <ion-buttons end>
+            <button ion-button icon-only>
+              <ion-icon name="chatboxes"></ion-icon>
+            </button>
+          </ion-buttons>
+      </ion-navbar>
+    </ion-footer>
 </ion-content>

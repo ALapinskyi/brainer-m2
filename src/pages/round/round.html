@@ -28,7 +28,7 @@
 
 
   <form id="round-answers">
-    <button ion-button primary block small
+    <button ion-button primary block small color="secondary"
         on-click="selectAnswer(answer)" 
         [@answerSelected]="answer.selectedState"
         *ngFor="let answer of currentQuestion.answers">
@@ -39,7 +39,7 @@
 
   <div id="overflow" *ngIf="nextQuestionButtonState === 'displayed'"></div>
 
-  <button id="next-question-button" ion-button large color="light"
+  <button id="next-question-button" ion-button large color="primary"
       [@nextQuestionButton]="nextQuestionButtonState"
       (click)="showNextQuestion($event)">
     Next question

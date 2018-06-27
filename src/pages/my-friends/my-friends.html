@@ -45,20 +45,18 @@
           
       <ion-item color="none" id="myFriends-{{item.username}}">
           <ion-avatar item-left>
-            <img />
+            <img src="assets/imgs/user.png"/>
           </ion-avatar>
           <h2>
               {{ item.username }}
           </h2>
+          <button ion-button color="primary" item-right>
+            Play
+          </button>
         </ion-item>
         <ion-item-options side="left">
-          <button ion-button color="assertive">
+          <button ion-button color="danger">
             Remove
-          </button>
-        </ion-item-options>
-        <ion-item-options side="right">
-          <button ion-button color="balanced">
-            Play
           </button>
         </ion-item-options>
     </ion-item-sliding>

@@ -15,15 +15,19 @@ import { Answer } from '../../models/game/answer';
   animations: [
     trigger('answerSelected', [
       state('selected',   style({
-        backgroundColor: 'blue',
         transform: 'scale(1.02)'
       })),
       state('correct',   style({
-        backgroundColor: 'green',
+        backgroundColor: '#13d46b',
+        transform: 'scale(1.02)'
+      })),
+      state('incorrect',   style({
+        backgroundColor: '#ff463c',
         transform: 'scale(1.02)'
       })),
       transition('unselected => selected', animate('300ms ease-in')),
-      transition('unselected => correct', animate('300ms ease-in'))
+      transition('unselected => correct', animate('300ms ease-in')),
+      transition('selected => imcorrect', animate('300ms ease-in'))
     ]),
     trigger('nextQuestionButton', [
       state('hidden',   style({
@@ -106,6 +110,11 @@ export class RoundPage implements OnInit {
         } else {
           this.unsuccessAudio.load();
           this.unsuccessAudio.play();
+          this.currentQuestion.answers.forEach( a => {
+            if(a.selectedState === "selected") {
+                a.selectedState = "incorrect";
+            }
+          });
         }
         answer.selectedState = "correct";
       }

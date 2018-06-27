@@ -1,3 +1,52 @@
 page-profile {
 
+    .scroll-content {
+        padding: 10px !important;
+    }
+
+    ion-row {
+        padding: 10px 10px 0px 10px;
+    }
+
+    #profile-row {
+        background-color: color($colors, light, base);
+
+        ion-avatar {
+
+            img {
+                display: block;
+                margin: auto;
+                border-radius: 60px;
+                height: 120px;
+                width: 120px;
+            }
+        }
+
+        #main-profile-info {
+            div {
+                margin: 10px 0;
+
+                ion-icon {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+
+    #buttons-row {        
+        background-color: color($colors, light, base);
+    }
+
+    #main-stats-row {
+        padding: 0px;
+        background-color: color($colors, secondary, base);
+
+        ion-col > * {
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+    }
+
 }

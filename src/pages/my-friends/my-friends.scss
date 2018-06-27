@@ -1,3 +1,10 @@
 page-my-friends {
+    #myFriends-list ion-item-sliding, #myFriends-list ion-item-sliding .item {
+        background-color: transparent;
+        
+        .item-inner {
+            border: none;
+        }
 
+    }
 }
