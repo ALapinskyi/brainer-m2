@@ -31,10 +31,10 @@ import { Answer } from '../../models/game/answer';
     ]),
     trigger('nextQuestionButton', [
       state('hidden',   style({
-        transform: 'translateY(80px)'
+        transform: 'translateY(100px)'
       })),
       state('displayed',   style({
-        display: 'translateY(0px)'
+        transform: 'translateY(-50px)'
       })),
       transition('hidden => displayed', animate('500ms ease-in')),
       transition('displayed => hidden', animate('300ms ease-out'))
@@ -98,7 +98,7 @@ export class RoundPage implements OnInit {
     setTimeout(() => {
       this.showCorrect();
       setTimeout(() => this.nextQuestionButtonState = 'displayed', 500);
-    }, 2000);
+    }, 300);
   }
 
   showCorrect(){

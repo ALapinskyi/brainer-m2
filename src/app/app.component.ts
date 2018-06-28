@@ -31,7 +31,10 @@ export class MyApp {
       title: "Friends", link: MyFriendsPage, icon: "contacts"
     },
     {
-      title: "Statistics", link: null, icon: "stats"
+      title: "Leaderboard", link: null, icon: "stats"
+    },
+    {
+      title: "Earn coins", link: MySettingsPage, icon: "settings"
     },
     {
       title: "Settings", link: MySettingsPage, icon: "settings"

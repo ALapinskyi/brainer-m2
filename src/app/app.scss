@@ -16,15 +16,15 @@
 // automatically applied to the <body> element in the app.
 
 * {
-    color: color($colors, dark, base);
+    color: color($colors, light, base);
 
 }
 .toolbar-title-md, countdown span {
-    color: color($colors, light, base);
+    color: color($colors, primary, base);
 }
 
 ion-nav ion-content > *{
-    background-color: color($colors, shadow, base);
+    background-color: color($colors, dark, base);
 }
 
 .scroll-content {
@@ -44,12 +44,46 @@ ion-nav ion-content > *{
     }
 }
 
+ion-app.md [padding] .scroll-content {
+    padding: 0px;
+    padding-top: 10px;
+}
+
 ion-header {
+
+    .toolbar-content {
+        position: absolute;
+        width: 100%;
+    }
     .toolbar-background {
         background-color: color($colors, dark, base);
     }
-    .toolbar-title > div, ion-icon {
-        color: color($colors, light, base);
+    .toolbar-title {
+        text-align: center;
+
+        > ion-icon {
+            color: color($colors, greened, base);
+        }
+    }
+
+    .segment-button{
+        text-transform: none !important;
+        font-size: 1.2em !important;
+
+        &.segment-activated {
+            color: color($colors, greened, base);
+            border-color: transparent !important;
+        }
+    }
+
+    .bar-button-menutoggle>span>ion-icon {
+        background-color: color($colors, dark, base);
+
+    }
+
+    .bar-button-menutoggle ion-icon {
+        color: color($colors, primary, base);
+
     }
 }
 
@@ -76,7 +110,7 @@ ion-content#side-menu {
             }
 
             &.activePage{
-                background-image: linear-gradient(30deg, #1b4c69 0%, #80d0c7 100%);
+                background-image: linear-gradient(30deg, color($colors, secondary, base) 0%, color($colors, primary, base)  100%);
 
                 ion-label, ion-icon {
                     color: color($colors, light, base);
@@ -86,7 +120,7 @@ ion-content#side-menu {
         #menu-list-item-user{
             height: 6em;
             margin-bottom: 30px;
-            background-image: linear-gradient(30deg, #1b4c69 0%, #80d0c7 100%);
+            background-image: linear-gradient(30deg, color($colors, secondary, base) 0%, color($colors, primary, base) 100%);
 
             ion-avatar>img {
                 width: 4em;

@@ -1,21 +1,27 @@
 page-round {
 
     ion-content .scroll-content {
-        background-color: color($colors, shadow, base);
+        background-color: color($colors, dark, base);
     }
+    
+        #round-help-button>span>ion-icon{
+            color: color($colors, greened, base);
+        }
 }
 
 .title-round {
     font-size: 12px;
+    color: color($colors, shadow, base);
 }
 
 .title-question {
     font-size: 16px;
+    color: color($colors, light, base);
 }
 
 #next-question-button {
     //position: fixed;
-    bottom: 10px;
+    bottom: -50px;
     display: block;
     margin: auto;
 }
@@ -24,18 +30,21 @@ page-round {
     height: 40%;
     font-size: 18px;
     padding: 10px;
-    background-color: color($colors, primary, base);
     border-radius: 1%;
     margin-bottom: 30px;
+    text-align: center;
+    margin-top: 20px;
 
 }
 
 #round-answers {
+    padding: 0 30px;
+
     button {
         text-transform: none;
         margin: 10px 0;
         height: 40px;
-        background-color: color($colors, yellowed, base);
+        background-color: color($colors, secondary, base);
 
         span {
             justify-content: right;
@@ -43,11 +52,11 @@ page-round {
     }
 }
 
-#overflow {
+/*#overflow {
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     right: 0;
     background-color: rgba(59, 66, 84, 0.79);
-}
+}*/

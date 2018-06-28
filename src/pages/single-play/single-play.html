@@ -23,14 +23,17 @@
   
   <ion-card class="game-card" 
             id="{{item.id}}"
-            (click)="item.waitingFor === currentUser.username? selectGame(item.id) : goToRoundInfo(item.id)" 
+             
             [ngClass]="{'your-turn':item.waitingFor === currentUser.username}"
             *ngFor="let item of actualGames">
 
     <ion-card-content swipeAll (swipedown)="expandCard(item);" (swipeup)="hideExpandedCard(item);">
-        <div class="card-title">Round {{item.roundNumber}} - {{item.score}}</div>
-        <div class="card-subtitle">{{item.secondPlayer.fullName}}</div>
-        <div class="hiddesSlowly" [@expandGameCard]="item.expandedCard">
+        <div (click)="item.waitingFor === currentUser.username? selectGame(item.id) : goToRoundInfo(item.id)">
+          <div class="card-title">Round {{item.roundNumber}} - {{item.score}}</div>
+          <div class="card-subtitle">{{item.secondPlayer.fullName}}</div>
+        </div>
+        <button ion-button outline round color="dark">Show details</button>
+        <!--<div class="hiddesSlowly" [@expandGameCard]="item.expandedCard">
             <ion-list id="myFriends-list" *ngIf="!isSearchMode">
                       
                   <ion-item color="none" id="myFriends" *ngFor="let round of item.rounds">
@@ -40,19 +43,19 @@
                     </ion-item>
               </ion-list>
             
-        </div>
+        </div>-->
     </ion-card-content>
 
 
   </ion-card>
 
 
-  <button id="singlePlay-button2" ion-button color="primary" block outline>
+  <!--<button id="singlePlay-button2" ion-button color="primary" block outline>
     Show finished
-  </button>
+  </button>-->
 
   <ion-fab center bottom id="start-new-game">
-      <button ion-fab color="primary">Start new</button>
+      <button ion-fab color="primary" >Start new</button>
       <ion-fab-list side="top">
           <button ion-fab>Quick game</button>
           <button ion-fab>Play with friend</button>
@@ -60,9 +63,9 @@
     </ion-fab-list>
   </ion-fab>
 
-  <ion-footer>
+  <ion-footer id="footer-game">
       <ion-navbar>
-        <div id="shape"></div>
+        <div id="shape-background"></div>
           <ion-buttons end>
             <button ion-button icon-only>
               <ion-icon name="chatboxes"></ion-icon>

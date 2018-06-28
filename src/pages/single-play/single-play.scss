@@ -1,5 +1,41 @@
 page-single-play {
 
+
+    ion-footer ion-navbar.toolbar-md {
+        min-height: 40px;
+
+        button>span>ion-icon {
+            color: color($colors, shadow, base);
+        }
+        .toolbar-background {
+            background: transparent;
+        }
+    }
+
+    .fab-close-icon {
+        line-height: 40px;
+    }
+
+
+    #shape-background{
+        overflow:hidden;
+    }
+    #shape-background:before{
+        content:'';
+        position:absolute;    
+        top: -24px;
+        left: 117px;
+        width: 142px;
+        height: 50px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 0px 9999px color($colors, secondary, base);
+        z-index:-1;
+    
+    }
+
+    ion-fab-list {
+        margin: 50px 0;
+    }
 }
 
 #start-new-game {
@@ -8,38 +44,21 @@ page-single-play {
     .fab{
         width: 130px;
         border-radius: 50px;
-        height: 45px;
+        height: 40px;
         font-size: 16px;
-        bottom: 20px;
+        bottom: 10px;
         box-shadow: none;
+        background-color: color($colors, danger, base)
     }
 
-
 }
 
-#shape {
-    width:50px;
-    height:50px;
-    background:#448ccb;
-    position:relative;
-}
-
-#shape:before {
-    content:'';
-    position:absolute;
-    bottom:50%;
-    width:100%;
-    height:100%;
-    border-radius:100%;
-    box-shadow: 0px 50px 0px 50px #448CCB;
-}
 
 .game-card {
     background-color: color($colors, secondary, base);
-    //border: 0.15em solid color($colors, primary, base);
-    padding: 15px 0px;
+    padding: 0px;
     text-align: center;
-    border-radius: 0.2em;
+    border-radius: 0.9em;
 
     .card-title {
         font-size: 18px;
@@ -47,16 +66,11 @@ page-single-play {
 }
 
 .game-card.your-turn {
-    background-color: color($colors, yellowed, base);
+    background-color: color($colors, secondary, base);
 
 }
 
 #singlePlay-heading {
-    color: color($colors, light, base);
-    text-align: center;
-}
-
-.hiddesSlowly {
-    opacity: 0;
-    height: 0;
+    color: color($colors, shadow, base);
+    padding-left: 15px;
 }

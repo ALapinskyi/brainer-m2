@@ -8,14 +8,14 @@
     </ion-buttons>
     <ion-title>
       <div class="title-round">
-        Round {{round.number}}
+        Round {{round.number}} - Nature
       </div>
       <div class="title-question">
         Question {{currentQuestion.number}}/{{round.questions.length}}
       </div>
     </ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="presentPopover($event)">
+      <button id="round-help-button" ion-button icon-only (click)="presentPopover($event)">
         <ion-icon name="help-circle"></ion-icon>
       </button>
     </ion-buttons>
