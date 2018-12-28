@@ -5,7 +5,7 @@ page-single-play {
         min-height: 40px;
 
         button>span>ion-icon {
-            color: color($colors, shadow, base);
+            color: color($colors, primary, base);
         }
         .toolbar-background {
             background: transparent;
@@ -55,10 +55,10 @@ page-single-play {
 
 
 .game-card {
-    background-color: color($colors, secondary, base);
+    background-color: color($colors, orange, base);
     padding: 0px;
     text-align: center;
-    border-radius: 0.9em;
+    border-radius: 0.2em;
 
     .card-title {
         font-size: 18px;
@@ -66,11 +66,11 @@ page-single-play {
 }
 
 .game-card.your-turn {
-    background-color: color($colors, secondary, base);
+    background-color: color($colors, greened, base);
 
 }
 
 #singlePlay-heading {
-    color: color($colors, shadow, base);
+    color: color($colors, primary, base);
     padding-left: 15px;
 }

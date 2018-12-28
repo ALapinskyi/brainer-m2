@@ -17,33 +17,35 @@
   <!--<button id="singlePlay-button1" ion-button color="positive" block on-click="goToNewGame()">
     Start new
   </button>-->
-  <h4 id="singlePlay-heading">
+  <h4 id="singlePlay-heading">sssss
     Actual games
   </h4>
   
   <ion-card class="game-card" 
             id="{{item.id}}"
-             
             [ngClass]="{'your-turn':item.waitingFor === currentUser.username}"
             *ngFor="let item of actualGames">
 
-    <ion-card-content swipeAll (swipedown)="expandCard(item);" (swipeup)="hideExpandedCard(item);">
+    <ion-card-content>
         <div (click)="item.waitingFor === currentUser.username? selectGame(item.id) : goToRoundInfo(item.id)">
-          <div class="card-title">Round {{item.roundNumber}} - {{item.score}}</div>
-          <div class="card-subtitle">{{item.secondPlayer.fullName}}</div>
+          
+          
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <div class="card-title">Round</div>
+                  <div class="card-title">{{item.roundNumber}}</div>
+              </ion-col>
+              <ion-col col-5>
+                  <div class="card-subtitle">{{item.secondPlayer.fullName}}</div>
+              </ion-col>
+              <ion-col>
+                <div class="card-title">{{item.score}}</div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
         </div>
-        <button ion-button outline round color="dark">Show details</button>
-        <!--<div class="hiddesSlowly" [@expandGameCard]="item.expandedCard">
-            <ion-list id="myFriends-list" *ngIf="!isSearchMode">
-                      
-                  <ion-item color="none" id="myFriends" *ngFor="let round of item.rounds">
-                      <h2>
-                          {{ round.score }}
-                      </h2>
-                    </ion-item>
-              </ion-list>
-            
-        </div>-->
     </ion-card-content>
 
 
