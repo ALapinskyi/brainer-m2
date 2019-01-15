@@ -14,6 +14,7 @@ import { RoundResultsPage } from '../pages/round-results/round-results';
 import { ProfilePage } from '../pages/profile/profile';
 import { StatisticsPage } from '../pages/statistics/statistics';
 import { RoundHelpPopoverPage } from '../pages/round-help-popover/round-help-popover';
+import { LoginPage } from '../pages/login/login';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -39,7 +40,8 @@ import { IonicSwipeAllModule } from 'ionic-swipe-all';
     RoundResultsPage,
     ProfilePage,
     StatisticsPage,
-    RoundHelpPopoverPage
+    RoundHelpPopoverPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -63,7 +65,8 @@ import { IonicSwipeAllModule } from 'ionic-swipe-all';
     RoundResultsPage,
     ProfilePage,
     StatisticsPage,
-    RoundHelpPopoverPage
+    RoundHelpPopoverPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

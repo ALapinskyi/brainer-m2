@@ -1,0 +1,30 @@
+page-login {
+
+    .scroll-content {
+        padding: 50px;
+        top: 200px;
+        position: relative;
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 3.5em;
+        margin: auto;
+        width: fit-content;
+        padding-bottom: 30px;
+    }
+
+    .login-button button{
+        text-transform: none;
+        margin-bottom: 10px;
+        
+    }
+    .facebook button{
+        background-color: #3b5998;
+    }
+
+    .gmail button{
+        background-color:	#c71610;
+    }
+
+}

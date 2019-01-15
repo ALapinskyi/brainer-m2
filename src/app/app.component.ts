@@ -13,6 +13,7 @@ import { ProfilePage } from '../pages/profile/profile';
 
 
 import { SinglePlayPage } from '../pages/single-play/single-play';
+import { LoginPage } from '../pages/login/login';
 
 
 
@@ -21,7 +22,7 @@ import { SinglePlayPage } from '../pages/single-play/single-play';
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-    rootPage:any = SinglePlayPage;
+    rootPage:any = LoginPage;
 
   pages = [
     {
