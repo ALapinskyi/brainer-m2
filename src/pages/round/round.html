@@ -1,29 +1,32 @@
 <ion-header>
   <ion-navbar hideBackButton="true">
     <ion-buttons start>
-      <button ion-button>
-        <countdown [config]="{leftTime: time}"
-                    (finished)="onTimerFinished()">$!s-ext!</countdown>
-      </button>
+      <button id="round-help-button" ion-button icon-only (click)="presentPopover($event)">
+          <ion-icon name="help-circle"></ion-icon>
+        </button>
     </ion-buttons>
     <ion-title>
       <div class="title-round">
-        Round {{round.number}} - Nature
+        Round {{round.number}}
       </div>
       <div class="title-question">
-        Question {{currentQuestion.number}}/{{round.questions.length}}
+        Question {{currentQuestion.number}}
       </div>
     </ion-title>
     <ion-buttons end>
-      <button id="round-help-button" ion-button icon-only (click)="presentPopover($event)">
-        <ion-icon name="help-circle"></ion-icon>
-      </button>
+        <button ion-button>
+            <countdown [config]="{leftTime: time}"
+                        (finished)="onTimerFinished()">$!s-ext!</countdown>
+          </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page8">
   <div id="round-question-desc" class="show-list-numbers-and-dots">
-    {{currentQuestion.description}}
+    <div class="question-text">
+        {{currentQuestion.description}}
+    </div>
+    
   </div>
 
 

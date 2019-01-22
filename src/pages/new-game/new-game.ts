@@ -15,10 +15,12 @@ export class NewGamePage {
   goToSelectRoundCategory(params){
     if (!params) params = {};
     this.navCtrl.push(SelectRoundCategoryPage);
-  }goToRound(params){
+  } 
+  goToRound(params){
     if (!params) params = {};
     this.navCtrl.push(RoundPage);
-  }goToRoundResults(params){
+  }
+  goToRoundResults(params){
     if (!params) params = {};
     this.navCtrl.push(RoundResultsPage);
   }

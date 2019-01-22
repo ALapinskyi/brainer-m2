@@ -4,19 +4,21 @@ page-round {
         background-color: color($colors, primary, base);
     }
     
-        #round-help-button>span>ion-icon{
-            color: color($colors, greened, base);
+     #round-help-button {
+        font-size: 1.5em;
+        
+        span>ion-icon{
+            color: color($colors, yellowed, base);
         }
+    }
 }
 
 .title-round {
     font-size: 12px;
-    color: color($colors, primary, base);
 }
 
 .title-question {
     font-size: 16px;
-    color: color($colors, light, base);
 }
 
 #next-question-button {
@@ -27,14 +29,23 @@ page-round {
 }
 
 #round-question-desc {
-    height: 40%;
+    height: 12em;
     font-size: 18px;
     padding: 10px;
     border-radius: 1%;
     margin-bottom: 30px;
     text-align: center;
     margin-top: 20px;
+    background-color: color($colors, light, base);
+    margin: 30px;
+    display: table;
+    width: -webkit-fill-available;
+}
 
+.question-text {
+    display: table-cell;
+    vertical-align: middle;
+    color: color($colors, secondary, base);
 }
 
 #round-answers {
@@ -47,9 +58,13 @@ page-round {
         background-color: color($colors, secondary, base);
 
         span {
-            justify-content: right;
+            justify-content: center;
         }
     }
+}
+
+.title-round, .title-question {
+    color: color($colors, light, base);
 }
 
 /*#overflow {
