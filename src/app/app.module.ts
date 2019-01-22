@@ -25,6 +25,8 @@ import { HttpModule } from '@angular/http';
 import { CountdownModule } from 'ngx-countdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IonicSwipeAllModule } from 'ionic-swipe-all';
+import { GooglePlus } from '@ionic-native/google-plus';
+import { Facebook } from '@ionic-native/facebook';
 
 @NgModule({
   declarations: [
@@ -71,6 +73,8 @@ import { IonicSwipeAllModule } from 'ionic-swipe-all';
   providers: [
     StatusBar,
     SplashScreen,
+    GooglePlus,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GameProvider,
     RestProvider
