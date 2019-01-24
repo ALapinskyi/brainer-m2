@@ -38,6 +38,17 @@ import { Answer } from '../../models/game/answer';
       })),
       transition('hidden => displayed', animate('500ms ease-in')),
       transition('displayed => hidden', animate('300ms ease-out'))
+    ]),
+    trigger('timeoutLine', [
+      state('full',   style({
+        backgroundColor: '#13d46b',
+        width: '100%',
+      })),
+      state('empty',   style({
+        backgroundColor: '#ff463c',
+        width: '0%'
+      })),
+      transition('full => empty', animate('10000ms ease-in'))
     ])
   ]
 })
@@ -47,6 +58,7 @@ export class RoundPage implements OnInit {
   content: ElementRef;
 
   nextQuestionButtonState: string = 'hidden';
+  timeoutLineState: string = 'full';
 
   round: Round;
   questionIndex: number = 0;
@@ -54,7 +66,7 @@ export class RoundPage implements OnInit {
 
   @ViewChild(CountdownComponent) 
   counter: CountdownComponent;
-  time: number = 5;
+  time: number = 10;
 
   clickAudio: any;
   successAudio: any;
@@ -85,6 +97,9 @@ export class RoundPage implements OnInit {
 
     this.unsuccessAudio = new Audio();
     this.unsuccessAudio.src = "assets/sounds/unsuccess.mp3";
+    setTimeout(() => {
+      this.timeoutLineState = 'empty';
+    }, 100);
   }
 
   selectAnswer(answer: Answer) {
@@ -97,7 +112,7 @@ export class RoundPage implements OnInit {
 
     setTimeout(() => {
       this.showCorrect();
-      setTimeout(() => this.nextQuestionButtonState = 'displayed', 500);
+      setTimeout(() => this.nextQuestionButtonState = 'displayed', 300);
     }, 300);
   }
 
@@ -125,7 +140,7 @@ export class RoundPage implements OnInit {
     this.questionIndex++;
     const animationsOptions = {
       animation: 'ios-transition',
-      duration: 1000
+      duration: 500
     }
 
     this.navCtrl.push(RoundPage, {

@@ -14,12 +14,13 @@
       </div>
     </ion-title>
     <ion-buttons end>
-        <button ion-button>
+        <button ion-button id="hidden-timeout">
             <countdown [config]="{leftTime: time}"
                         (finished)="onTimerFinished()">$!s-ext!</countdown>
           </button>
     </ion-buttons>
   </ion-navbar>
+  <div class="timeout-line" [@timeoutLine]="timeoutLineState"></div>
 </ion-header>
 <ion-content padding id="page8">
   <div id="round-question-desc" class="show-list-numbers-and-dots">

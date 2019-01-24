@@ -63,6 +63,16 @@ page-round {
     }
 }
 
+#hidden-timeout{
+    display: none;
+}
+
+.timeout-line {
+    position: relative;
+    height: 6px;
+    background-color: color($colors, orange, base);
+}
+
 .title-round, .title-question {
     color: color($colors, light, base);
 }

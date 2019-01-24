@@ -2,7 +2,6 @@ page-single-play {
 
 
     ion-footer ion-navbar.toolbar-md {
-        min-height: 40px;
 
         button>span>ion-icon {
             color: color($colors, primary, base);
@@ -13,7 +12,7 @@ page-single-play {
     }
 
     .fab-close-icon {
-        line-height: 40px;
+        line-height: 45px;
     }
 
 
@@ -41,14 +40,27 @@ page-single-play {
 #start-new-game {
     margin-left: -65px;
 
-    .fab{
-        width: 130px;
-        border-radius: 50px;
-        height: 40px;
-        font-size: 16px;
-        bottom: 10px;
+    .fab {
+        width: 8em;
+        border-radius: 2em;
+        height: 3.5em;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        bottom: 0.5em;
+        -webkit-box-shadow: none;
         box-shadow: none;
-        background-color: color($colors, danger, base)
+        border: 0.4em solid #255599;
+        background-image: linear-gradient(to bottom, #f33f4e, #a02731);
+    }
+
+    .show {
+        width: 10em;
+        border: none;
+        font-size: 1em;
+        text-transform: none;
+        height: 3.5em;
+        bottom: 2em;
+        margin: 0.3em 0;
     }
 
 }
@@ -73,4 +85,10 @@ page-single-play {
 #singlePlay-heading {
     color: color($colors, primary, base);
     padding-left: 15px;
+}
+
+#footer-game {
+    height: 4em;
+    background-color: color($colors, secondary, base);
+
 }
