@@ -1,13 +1,23 @@
 page-single-play {
 
+    .toolbar-title {
+        text-align: left;
+        position: relative;
+        left: 2em;
+        font-weight: bold;
+    }
 
-    ion-footer ion-navbar.toolbar-md {
+    ion-footer {
 
-        button>span>ion-icon {
-            color: color($colors, primary, base);
-        }
         .toolbar-background {
             background: transparent;
+        }
+    }
+
+    ion-footer, ion-navbar {
+
+        button>span>ion-icon{
+            color: color($colors, primary, base);
         }
     }
 
@@ -35,60 +45,80 @@ page-single-play {
     ion-fab-list {
         margin: 50px 0;
     }
-}
 
-#start-new-game {
-    margin-left: -65px;
-
-    .fab {
-        width: 8em;
-        border-radius: 2em;
-        height: 3.5em;
-        font-size: 1.3em;
-        text-transform: uppercase;
-        bottom: 0.5em;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        border: 0.4em solid #255599;
-        background-image: linear-gradient(to bottom, #f33f4e, #a02731);
+    #start-new-game {
+        margin-left: -65px;
+    
+        .fab {
+            width: 8em;
+            border-radius: 2em;
+            height: 3.5em;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            bottom: 0.5em;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 0.4em solid #255599;
+            background-image: linear-gradient(to bottom, #f33f4e, #a02731);
+        }
+    
+        .show {
+            width: 10em;
+            border: none;
+            font-size: 1em;
+            text-transform: none;
+            height: 3.5em;
+            bottom: 2em;
+            margin: 0.3em 0;
+        }
+    
+    }
+    
+    
+    .game-card {
+        background-color: color($colors, orange, base);
+        padding: 0px;
+        text-align: center;
+        border-radius: 0.2em;
+    
+        .card-title {
+            font-size: 18px;
+        }
+    }
+    
+    .game-card.your-turn {
+        background-color: color($colors, greened, base);
+    
+    }
+    
+    #singlePlay-heading {
+        color: color($colors, primary, base);
+        padding-left: 15px;
+    }
+    
+    #footer-game {
+        height: 4em;
+        background-color: color($colors, secondary, base);
+    
     }
 
-    .show {
-        width: 10em;
-        border: none;
-        font-size: 1em;
-        text-transform: none;
-        height: 3.5em;
-        bottom: 2em;
-        margin: 0.3em 0;
+    .game-values {
+        display: inline;
+        padding-left: 5em;
+
+        .coins {
+            vertical-align: top;
+            margin-top: 0.4em;
+            display: inline-block;
+            font-size: 1.3em;
+            padding-right: 1em;
+
+            ion-icon, p {
+                display: inline-block;
+                margin: 0;
+                color: color($colors, yellowed, base);
+            }
+
+        }
     }
-
-}
-
-
-.game-card {
-    background-color: color($colors, orange, base);
-    padding: 0px;
-    text-align: center;
-    border-radius: 0.2em;
-
-    .card-title {
-        font-size: 18px;
-    }
-}
-
-.game-card.your-turn {
-    background-color: color($colors, greened, base);
-
-}
-
-#singlePlay-heading {
-    color: color($colors, primary, base);
-    padding-left: 15px;
-}
-
-#footer-game {
-    height: 4em;
-    background-color: color($colors, secondary, base);
-
 }

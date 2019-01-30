@@ -1,0 +1,34 @@
+
+    .energy {
+        display: inline-block;
+
+        .energy-item {
+            display: inline-block;
+
+            .rectangle {
+                background-color: color($colors, light, base);
+                width: 4px;
+                height: 1.3em;
+                margin: 1px;
+                margin: 0.07em;
+                border-radius: 2em;
+            }
+            .full {
+                background-color: color($colors, greened, base);
+            }
+            .charging {
+                animation:change-color 0.8s infinite;
+            }
+
+            @keyframes change-color 
+            {
+                0%   {background-color:color($colors, greened, base);}
+                50%  {background-color: color($colors, light, base);}
+                100%   {background-color:color($colors, greened, base);}
+            }
+        }
+        .timer p{
+            margin: 0;
+            font-size: 0.8em;
+        }
+    }

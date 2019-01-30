@@ -1,25 +1,27 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+  <ion-navbar  hideBackButton="true">
+    <!--<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button>
+    </button>-->
     <ion-title>
       Single Play
     </ion-title>
-    <!--<ion-buttons end>
+    <ion-buttons start>
       <button ion-button icon-only>
-        <ion-icon name="chatboxes"></ion-icon>
+        <ion-icon name="settings"></ion-icon>
       </button>
-    </ion-buttons>-->
+    </ion-buttons>
+    <ion-buttons end class="game-values">
+      <div class="coins">
+          <ion-icon name="logo-bitcoin"></ion-icon>
+          <p>{{coins}}</p>
+      </div>
+      <power-timer [time]="3" [power]="2"></power-timer>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content padding id="simple-game-page">
-  <!--<button id="singlePlay-button1" ion-button color="positive" block on-click="goToNewGame()">
-    Start new
-  </button>-->
-  <h4 id="singlePlay-heading">sssss
-    Actual games
-  </h4>
+  
   
   <ion-card class="game-card" 
             id="{{item.id}}"

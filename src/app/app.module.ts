@@ -28,6 +28,9 @@ import { IonicSwipeAllModule } from 'ionic-swipe-all';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Facebook } from '@ionic-native/facebook';
 
+
+import { PowerTimerComponent } from '../components/power-timer/power-timer';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -43,7 +46,9 @@ import { Facebook } from '@ionic-native/facebook';
     ProfilePage,
     StatisticsPage,
     RoundHelpPopoverPage,
-    LoginPage
+    LoginPage,
+
+    PowerTimerComponent
   ],
   imports: [
     BrowserModule,

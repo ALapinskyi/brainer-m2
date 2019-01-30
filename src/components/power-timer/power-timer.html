@@ -1,0 +1,11 @@
+<!-- Generated template for the PowerTimerComponent component -->
+<div class="energy">
+    <div class="energy-item"  *ngFor="let in of counter(maxPower); let i = index">
+        <div class="rectangle" [ngClass]="{'full': i < powerValue, 'charging': i === powerValue}"></div>
+    </div>
+    <div class="timer">
+        <p>
+          <countdown [config]="{leftTime: powerTimeout}" (finished)="onTimerFinished()">$!m!:$!s!</countdown>
+        </p>
+    </div>
+</div>

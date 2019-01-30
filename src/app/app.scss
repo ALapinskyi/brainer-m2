@@ -19,7 +19,7 @@
     color: color($colors, light, base);
 
 }
-.toolbar-title-md, countdown span {
+.toolbar-title-md {
     color: color($colors, primary, base);
 }
 
@@ -85,6 +85,10 @@ ion-header {
         color: color($colors, primary, base);
 
     }
+}
+
+ion-navbar.toolbar {
+    padding: 0 1em;
 }
 
 .menu-inner{

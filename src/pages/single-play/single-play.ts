@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController, ModalController, LoadingController } from 'ionic-angular';
 import { NewGamePage } from '../new-game/new-game';
 import { SelectRoundCategoryPage } from '../select-round-category/select-round-category';
@@ -9,6 +9,8 @@ import { GameListItem } from '../../models/simpleGameItem';
 import { Round } from '../../models/game/round';
 import { RoundPage } from '../round/round';
 
+import { PowerTimerComponent } from '../../components/power-timer/power-timer';
+import { CountdownComponent, Config } from 'ngx-countdown';
 import { trigger,style,transition,animate,state } from '@angular/animations';
 
 @Component({
@@ -31,7 +33,8 @@ import { trigger,style,transition,animate,state } from '@angular/animations';
 })
 export class SinglePlayPage {
 
-  vvaa: number = 50;
+
+
   currentUser: User;
 
   actualGames: GameListItem[];
@@ -39,13 +42,18 @@ export class SinglePlayPage {
 
   selectedGame: Game;
 
+  coins: number;
+
   constructor(private gameProvider: GameProvider, 
     public loadingCtrl: LoadingController,
     public modalCtrl: ModalController,
     public navCtrl: NavController) {
       this.setCurrentUser();
       this.setActualGames();
+
+      this.coins = 12;
   }
+  
 
   private setActualGames(){
     this.gameProvider.getGamesList().subscribe(
@@ -130,4 +138,6 @@ export class SinglePlayPage {
   goToRoundInfo(event: any){
     console.log(event);
   }
+
+
 }
