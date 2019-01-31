@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { GameListItem } from '../../models/simpleGameItem';
 
 /**
  * Generated class for the GameRoundItemComponent component.
@@ -12,11 +13,19 @@ import { Component } from '@angular/core';
 })
 export class GameRoundItemComponent {
 
-  text: string;
+  private itemValue: GameListItem;
 
   constructor() {
-    console.log('Hello GameRoundItemComponent Component');
-    this.text = 'Hello World';
+  }
+
+  @Output() onClick: EventEmitter<any> = new EventEmitter();
+
+  @Input() set item(val: GameListItem) {
+    this.itemValue = val;
+  }
+
+  onCardClick(clickedEntry: GameListItem): void {
+      this.onClick.emit([clickedEntry.id]);
   }
 
 }

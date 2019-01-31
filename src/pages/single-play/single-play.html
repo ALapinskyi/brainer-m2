@@ -23,40 +23,13 @@
 <ion-content padding id="simple-game-page">
   
   
-  <ion-card class="game-card" 
-            id="{{item.id}}"
-            [ngClass]="{'your-turn':item.waitingFor === currentUser.username}"
-            *ngFor="let item of actualGames">
-
-    <ion-card-content>
-        <div (click)="item.waitingFor === currentUser.username? selectGame(item.id) : goToRoundInfo(item.id)">
-          
-          
-          <ion-grid>
-            <ion-row>
-              <ion-col>
-                  <div class="card-title">Round</div>
-                  <div class="card-title">{{item.roundNumber}}</div>
-              </ion-col>
-              <ion-col col-5>
-                  <div class="card-subtitle">{{item.secondPlayer.fullName}}</div>
-              </ion-col>
-              <ion-col>
-                <div class="card-title">{{item.score}}</div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-          
-        </div>
-    </ion-card-content>
-
-
+  <ion-card id="{{item.id}}" *ngFor="let item of actualGames">
+      <game-round-item (onClick) = "item.waitingFor === currentUser.username ? selectGame($event) : goToRoundInfo($event)" 
+      [ngClass]="{'your-turn':item.waitingFor === currentUser.username}"
+      [item]="item"></game-round-item>
   </ion-card>
 
 
-  <!--<button id="singlePlay-button2" ion-button color="primary" block outline>
-    Show finished
-  </button>-->
 
   <ion-fab center bottom id="start-new-game">
       <button ion-fab color="primary" >Start new</button>

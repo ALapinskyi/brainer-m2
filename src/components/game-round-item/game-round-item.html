@@ -1,4 +1,23 @@
-<!-- Generated template for the GameRoundItemComponent component -->
-<div>
-  {{text}}
-</div>
+<ion-card-content class="game-card">
+  <div (click)="onCardClick(itemValue)">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="round">
+          <div>Round</div>
+          <div>{{itemValue.roundNumber}}</div>
+      </ion-col>
+      <hr class="vertical">
+      <ion-col col-7 class="info">
+          <div class="card-title">{{itemValue.secondPlayer.fullName}}</div>
+          <div class="card-subtitle">10 minutes ago</div>
+      </ion-col>
+      <hr class="vertical">
+      <ion-col class="score">
+        <div>{{itemValue.score}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  </div>
+</ion-card-content>

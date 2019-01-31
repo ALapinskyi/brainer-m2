@@ -10,6 +10,8 @@ import { Round } from '../../models/game/round';
 import { RoundPage } from '../round/round';
 
 import { PowerTimerComponent } from '../../components/power-timer/power-timer';
+import { GameRoundItemComponent } from '../../components/game-round-item/game-round-item';
+
 import { CountdownComponent, Config } from 'ngx-countdown';
 import { trigger,style,transition,animate,state } from '@angular/animations';
 
@@ -32,8 +34,6 @@ import { trigger,style,transition,animate,state } from '@angular/animations';
   ]
 })
 export class SinglePlayPage {
-
-
 
   currentUser: User;
 

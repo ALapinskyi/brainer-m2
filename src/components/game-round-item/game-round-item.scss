@@ -1,3 +1,56 @@
 game-round-item {
+    .game-card {
+        background-color: color($colors, oranged, base);
+        padding: 0px;
+        text-align: center;
 
+
+        .grid, .col {
+            padding: 0;
+            height: 6em;
+        }
+
+        .round{
+            padding: 1.2em 0;
+
+            div{
+                font-size: 1.2em;
+            }
+        }
+
+        .info {
+            padding: 1.4em;
+
+            .card-title {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+
+            .card-subtitle {
+                font-size: 0.9em;
+                font-style: italic;
+                color: color($colors, secondary, base);
+            }
+        }
+
+        .score {
+            padding: 1.5em 0;
+            
+            div{
+                font-size: 2em;
+                font-weight: bold;
+            }
+        }
+    }
+
+    hr.vertical {
+        height: auto; 
+        width: 0;
+        border: 0.5px solid color($colors, secondary, base);
+        margin: 0;
+    }
+}
+
+game-round-item.your-turn .game-card {
+    background-color: color($colors, greened, base);
 }

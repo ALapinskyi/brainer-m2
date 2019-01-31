@@ -75,22 +75,6 @@ page-single-play {
     }
     
     
-    .game-card {
-        background-color: color($colors, orange, base);
-        padding: 0px;
-        text-align: center;
-        border-radius: 0.2em;
-    
-        .card-title {
-            font-size: 18px;
-        }
-    }
-    
-    .game-card.your-turn {
-        background-color: color($colors, greened, base);
-    
-    }
-    
     #singlePlay-heading {
         color: color($colors, primary, base);
         padding-left: 15px;
