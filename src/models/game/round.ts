@@ -8,7 +8,7 @@ export class Round {
     roundType: RoundType;
     category: Category;
     questions: Question[];
-    score: Map<string, number>;
+    score: Map<number, String[]>;
 
     /*constructor(number?: number){
         this.number = number;

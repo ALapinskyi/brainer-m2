@@ -1,0 +1,278 @@
+{
+    "id": "625",
+    "players": [
+        {
+            "username": "thisGamer",
+            "fullName": "Boss Gamer"
+        },
+        {
+            "username": "olapinskyi",
+            "fullName": "Oleksii Lapinskyi"
+        }
+    ],
+    "type": "R_5",
+    "startTime": "2018-02-02 14:55:20",
+    "changeTime": "2018-02-02 14:55:20",
+    "finishTime": "2018-02-02 14:55:20",
+    "rounds" : [
+        {
+            "number": 1,
+            "roundType": "SIMPLE",
+            "category": "Sport",
+            "score": {
+                "1" : ["olapinskyi"],
+                "2" : ["olapinskyi", "thisGamer"],
+                "3" : ["olapinskyi", "thisGamer"],
+                "4" : ["olapinskyi"],
+                "5" : []
+            },
+            "questions": [
+                {
+                    "q_id": "qwe1",
+                    "number": 1,
+                    "description": "How many days in January?",
+                    "type": "TEXT",
+                    "answers": [
+                        {
+                            "id": "362",
+                            "description": "28",
+                            "correct": false
+                        },
+                        {
+                            "id": "363",
+                            "description": "31",
+                            "correct": true
+                        },
+                        {
+                            "id": "364",
+                            "description": "30",
+                            "correct": false
+                        },
+                        {
+                            "id": "365",
+                            "description": "29",
+                            "correct": false
+                        }
+                    ],
+                    "playerResult": [
+                        {
+                            "olapinskyi": {
+                                "id": "363",
+                                "description": "31",
+                                "correct": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "q_id": "qwe1",
+                    "number": 2,
+                    "description": "How many days in January?",
+                    "type": "TEXT",
+                    "answers": [
+                        {
+                            "id": "362",
+                            "description": "28",
+                            "correct": false
+                        },
+                        {
+                            "id": "363",
+                            "description": "31",
+                            "correct": true
+                        },
+                        {
+                            "id": "364",
+                            "description": "30",
+                            "correct": false
+                        },
+                        {
+                            "id": "365",
+                            "description": "29",
+                            "correct": false
+                        }
+                    ],
+                    "playerResult": [
+                        {
+                            "olapinskyi": {
+                                "id": "363",
+                                "description": "31",
+                                "correct": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "q_id": "qwe1",
+                    "number": 3,
+                    "description": "How many days in January?",
+                    "type": "TEXT",
+                    "answers": [
+                        {
+                            "id": "362",
+                            "description": "28",
+                            "correct": false
+                        },
+                        {
+                            "id": "363",
+                            "description": "31",
+                            "correct": true
+                        },
+                        {
+                            "id": "364",
+                            "description": "30",
+                            "correct": false
+                        },
+                        {
+                            "id": "365",
+                            "description": "29",
+                            "correct": false
+                        }
+                    ],
+                    "playerResult": [
+                        {
+                            "olapinskyi": {
+                                "id": "362",
+                                "description": "28",
+                                "correct": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "roundType": "SIMPLE",
+            "category": "Sport",
+            "score": {
+                "1" : ["olapinskyi"],
+                "2" : ["olapinskyi", "thisGamer"],
+                "3" : ["olapinskyi", "thisGamer"],
+                "4" : ["olapinskyi"],
+                "5" : []
+            },
+            "questions": [
+                {
+                    "q_id": "qwe1",
+                    "number": 1,
+                    "description": "How many days in January?",
+                    "type": "TEXT",
+                    "answers": [
+                        {
+                            "id": "362",
+                            "description": "28",
+                            "correct": false
+                        },
+                        {
+                            "id": "363",
+                            "description": "31",
+                            "correct": true
+                        },
+                        {
+                            "id": "364",
+                            "description": "30",
+                            "correct": false
+                        },
+                        {
+                            "id": "365",
+                            "description": "29",
+                            "correct": false
+                        }
+                    ],
+                    "playerResult": [
+                        {
+                            "olapinskyi": {
+                                "id": "363",
+                                "description": "31",
+                                "correct": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "q_id": "qwe1",
+                    "number": 2,
+                    "description": "How many days in January?",
+                    "type": "TEXT",
+                    "answers": [
+                        {
+                            "id": "362",
+                            "description": "28",
+                            "correct": false
+                        },
+                        {
+                            "id": "363",
+                            "description": "31",
+                            "correct": true
+                        },
+                        {
+                            "id": "364",
+                            "description": "30",
+                            "correct": false
+                        },
+                        {
+                            "id": "365",
+                            "description": "29",
+                            "correct": false
+                        }
+                    ],
+                    "playerResult": [
+                        {
+                            "olapinskyi": {
+                                "id": "363",
+                                "description": "31",
+                                "correct": true
+                            }
+                        }
+                    ]
+                },
+                {
+                    "q_id": "qwe1",
+                    "number": 3,
+                    "description": "How many days in January?",
+                    "type": "TEXT",
+                    "answers": [
+                        {
+                            "id": "362",
+                            "description": "28",
+                            "correct": false
+                        },
+                        {
+                            "id": "363",
+                            "description": "31",
+                            "correct": true
+                        },
+                        {
+                            "id": "364",
+                            "description": "30",
+                            "correct": false
+                        },
+                        {
+                            "id": "365",
+                            "description": "29",
+                            "correct": false
+                        }
+                    ],
+                    "playerResult": [
+                        {
+                            "olapinskyi": {
+                                "id": "362",
+                                "description": "28",
+                                "correct": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 3
+        },
+        {
+            "number": 4
+        },
+        {
+            "number": 5
+        }
+    ]
+}

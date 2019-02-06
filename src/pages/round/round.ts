@@ -150,7 +150,6 @@ export class RoundPage implements OnInit {
   }
 
   goToRoundResults(params){
-    if (!params) params = {};
     this.navCtrl.push(RoundResultsPage);
   }
 

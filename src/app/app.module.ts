@@ -31,6 +31,7 @@ import { Facebook } from '@ionic-native/facebook';
 
 import { PowerTimerComponent } from '../components/power-timer/power-timer';
 import { GameRoundItemComponent } from '../components/game-round-item/game-round-item';
+import { RoundDetailsItemComponent } from '../components/round-details-item/round-details-item';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { GameRoundItemComponent } from '../components/game-round-item/game-round
     LoginPage,
 
     PowerTimerComponent,
-    GameRoundItemComponent
+    GameRoundItemComponent,
+    RoundDetailsItemComponent
   ],
   imports: [
     BrowserModule,

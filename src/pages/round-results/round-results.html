@@ -8,4 +8,6 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page10"></ion-content>
+<ion-content padding id="round-results">
+  <round-details-item [round]="round" *ngFor="let round of game.rounds"></round-details-item>
+</ion-content>

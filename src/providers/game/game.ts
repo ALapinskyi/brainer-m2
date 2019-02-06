@@ -13,6 +13,7 @@ import { GameListItem } from '../../models/simpleGameItem';
 
 const gameListUrl = 'assets/data/gameList.json';
 const game1Url = 'assets/data/game1.json';
+const game2Url = 'assets/data/game2.json';
 
 /*
   Generated class for the GameListProvider provider.
@@ -36,8 +37,15 @@ export class GameProvider {
   }
 
   getGameById(gameId: string): Observable<Game>{
-    return this.http.get(game1Url).map(res =>
+    console.log(gameId);
+    if(gameId[0] === "625") {
+      return this.http.get(game2Url).map(res =>
         { return this.restService.extractData(res); });
+    } else {
+      return this.http.get(game1Url).map(res =>
+        { return this.restService.extractData(res); });
+    }
+    
 
   }
   /*

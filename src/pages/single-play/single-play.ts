@@ -7,7 +7,9 @@ import { Game } from '../../models/game/game';
 import { User } from '../../models/user';
 import { GameListItem } from '../../models/simpleGameItem';
 import { Round } from '../../models/game/round';
+
 import { RoundPage } from '../round/round';
+import { RoundResultsPage } from '../round-results/round-results';
 
 import { PowerTimerComponent } from '../../components/power-timer/power-timer';
 import { GameRoundItemComponent } from '../../components/game-round-item/game-round-item';
@@ -76,14 +78,7 @@ export class SinglePlayPage {
 
     let currentRound: Round;
     if(game.rounds) {
-      for(var round of game.rounds) {
-        if(round.score && round.score.get(this.currentUser.username)) {
-          continue;
-        } else {
-          currentRound = round;
-          break;
-        }
-      }
+       currentRound = game.rounds[game.rounds.length - 1];
     }
     if(currentRound !== undefined) {
       this.goToRound(currentRound);
@@ -120,23 +115,28 @@ export class SinglePlayPage {
   }
   
   goToRound(round: Round){
-
-
     this.navCtrl.push(RoundPage, {
       round: round
     });
   }
 
-  expandCard(game: GameListItem) {
-    game.expandedCard = true;
-  }
+  goToRoundInfo(gameId: string){
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...',
+      spinner: 'dots'
+    });
+    loading.present();
 
-  hideExpandedCard(game: GameListItem) {
-    game.expandedCard = false;
-  }
-  
-  goToRoundInfo(event: any){
-    console.log(event);
+    this.gameProvider.getGameById(gameId)
+    .subscribe(res => {
+      setTimeout(() => {
+        loading.dismiss();
+        this.navCtrl.push(RoundResultsPage, {
+          game: res
+        });
+      }, 500)
+      ;
+    }, errorMessage => this.errorMessage = errorMessage);
   }
 
 

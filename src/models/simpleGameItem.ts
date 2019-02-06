@@ -7,6 +7,4 @@ export class GameListItem {
     waitingTime: number;
     score: string;
     secondPlayer: Player;
-
-    expandedCard: boolean = false;
 }
